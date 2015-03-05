@@ -1,6 +1,6 @@
 package org.jalgo;
 
-public class RomanToInteger {
+public class NumberToRoman {
 	static int[] NUMBERS = { 1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900,
 			1000 };
 	static String[] ROMAN_LETTERS = { "I", "IV", "V", "IX", "X", "XL", "L",
