@@ -21,10 +21,4 @@ public class Anagram {
         }
         return true;
     }
-
-    public static void main(String[] args) {
-        System.out.println(isAnagram("123", "321"));
-        System.out.println(isAnagram("123", ""));
-        System.out.println(isAnagram("jar", "raj"));
-    }
 }

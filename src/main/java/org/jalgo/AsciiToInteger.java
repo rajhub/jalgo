@@ -1,11 +1,7 @@
 package org.jalgo;
 
 public class AsciiToInteger {
-	public static void main(String[] args) {
-		System.out.println(toInt("123"));
-	}
-
-	private static int toInt(String str) {
+	public static int toInt(String str) {
 
 		// add null and empty string check here
 		if (str == null || str.isEmpty()) 

@@ -17,11 +17,4 @@ public class Anagram2 {
 
         return (s1 ^ s2) == 0;
     }
-
-    public static void main(String[] args) {
-        System.out.println(isAnagram("123", "321"));
-        System.out.println(isAnagram("123", ""));
-        System.out.println(isAnagram("jar", "raj"));
-        System.out.println(isAnagram("jar", "rAj"));
-    }
 }
