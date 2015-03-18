@@ -1,6 +1,4 @@
-package org.jalgo;
-
-import org.jalgo.ds.Node;
+package org.jalgo.ds;
 
 public class Queue {
 	

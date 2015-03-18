@@ -1,4 +1,4 @@
-package org.jalgo;
+package org.jalgo.ds;
 
 import org.jalgo.ds.Node;
 
