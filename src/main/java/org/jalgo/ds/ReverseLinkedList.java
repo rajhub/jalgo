@@ -1,29 +1,27 @@
 package org.jalgo.ds;
 
-import org.jalgo.ds.Node;
-
 public class ReverseLinkedList {
 	
-	public static void print(Node node) {
-		if (node == null) {
+	public static void print(ListNode listNode) {
+		if (listNode == null) {
 			System.out.println("List empty"); 
 		} 
 		
-		while (node != null) {
-			System.out.println(node.value());
-			node = node.next();
+		while (listNode != null) {
+			System.out.println(listNode.value);
+			listNode = listNode.next;
 		}
 	}
 	
-	public static Node reverse(Node node) {
+	public static ListNode reverse(ListNode listNode) {
 		
-		Node current = node;
-		Node prev = null;
-		Node next = null;
+		ListNode current = listNode;
+		ListNode prev = null;
+		ListNode next = null;
 		
 		while(current != null) {
-			next = current.next();
-			current.next(prev);
+			next = current.next;
+			current.next = prev;
 			prev = current;
 			current = next;
 		}
@@ -32,16 +30,16 @@ public class ReverseLinkedList {
 	}
 	
 	public static void main(String args[]) {
-		Node n1 = new Node(1);
-		Node n2 = new Node(2);
-		Node n3 = new Node(3);
-		Node n4 = new Node(4);
-		Node n5 = new Node(5);
+		ListNode n1 = new ListNode(1);
+		ListNode n2 = new ListNode(2);
+		ListNode n3 = new ListNode(3);
+		ListNode n4 = new ListNode(4);
+		ListNode n5 = new ListNode(5);
 		
-		n1.next(n2);
-		n2.next(n3);
-		n3.next(n4);
-		n4.next(n5);
+		n1.next = n2;
+		n2.next = n3;
+		n3.next = n4;
+		n4.next = n5;
 		
 		print(n1);
 		print(reverse(n1));

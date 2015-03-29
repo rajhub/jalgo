@@ -2,16 +2,16 @@ package org.jalgo.ds;
 
 public class Queue {
 	
-	Node start = null;
-	Node end = null;
+	ListNode start = null;
+	ListNode end = null;
 	
 	public void enqueue(Object v) {
 		if (start == null) {
-			start = new Node(v);
+			start = new ListNode(v);
 			end = start;
 		} else {
-			Node n = new Node(v);
-			end.next(n);
+			ListNode n = new ListNode(v);
+			end.next = n;
 			end = n;
 		}
 	}
@@ -20,21 +20,21 @@ public class Queue {
 		if (start == null) 
 			return null;
 		else {
-			Node n = start;
-			start = start.next();
-			return n.value();
+			ListNode n = start;
+			start = start.next;
+			return n.value;
 		}
 	}
 	
 	public void print() {
-		Node t = start;
+		ListNode t = start;
 		if (t == null) {
 			System.out.println("Queue empty"); 
 		} 
 		
 		while (t != null) {
-			System.out.println(t.value());
-			t = t.next();
+			System.out.println(t.value);
+			t = t.next;
 		}
 	}
 	

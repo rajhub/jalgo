@@ -1,5 +1,8 @@
 package org.jalgo.ds;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class BinaryTree {
@@ -35,32 +38,72 @@ public class BinaryTree {
     }
 
     // depth first - data, left, right
-    public static void preOrder(TreeNode root) {
+    public static void preOrderRecursive(TreeNode root) {
         if (root == null)
             return;
 
         System.out.println(root.value);
-        preOrder(root.left);
-        preOrder(root.right);
+        preOrderRecursive(root.left);
+        preOrderRecursive(root.right);
+    }
+
+    // depth first - data, left, right
+    public static List preOrder(TreeNode root) {
+
+        ArrayList<Object> list = new ArrayList<Object>();
+
+        if (root == null)
+            return list;
+
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        stack.push(root);
+        while(!stack.empty()) {
+            TreeNode node = stack.pop();
+            list.add(node.value);
+
+            if (node.right != null)
+                stack.push(node.right);
+
+            if (node.left != null)
+                stack.push(node.left);
+        }
+
+        return list;
     }
 
     // depth first - left, data, right
-    public static void inOrder(TreeNode root) {
+    public static List inOrder(TreeNode root) {
+
+        ArrayList<Object> list = new ArrayList<Object>();
+
+        if (root == null)
+            return list;
+
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+
+        while(!stack.empty()) {
+        }
+
+        return list;
+    }
+
+    // depth first - left, data, right
+    public static void inOrderRecursive(TreeNode root) {
         if (root == null)
             return;
 
-        inOrder(root.left);
+        inOrderRecursive(root.left);
         System.out.println(root.value);
-        inOrder(root.right);
+        inOrderRecursive(root.right);
     }
 
     // depth first - left, right, data
-    public static void postOrder(TreeNode root) {
+    public static void postOrderRecursive(TreeNode root) {
         if (root == null)
             return;
 
-        postOrder(root.left);
-        postOrder(root.right);
+        postOrderRecursive(root.left);
+        postOrderRecursive(root.right);
         System.out.println(root.value);
     }
 
