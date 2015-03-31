@@ -1,5 +1,6 @@
 package org.jalgo;
 
+import org.jalgo.string.Anagram;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;

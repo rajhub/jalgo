@@ -1,6 +1,6 @@
-package org.jalgo;
+package org.jalgo.string;
 
-public class Anagram2 {
+public class Anagram {
     public static boolean isAnagram(String str1, String str2) {
         int[] LETTERS = new int[256];
 
@@ -9,12 +9,16 @@ public class Anagram2 {
         if (str1.length() != str2.length())
             return false;
 
-        int s1 = 0, s2 = 0;
+
         for (int i = 0; i < str1.length(); i++) {
-            s1 ^= str1.charAt(i);
-            s2 ^= str2.charAt(i);
+            LETTERS[str1.charAt(i)]++;
+            LETTERS[str2.charAt(i)]--;
         }
 
-        return (s1 ^ s2) == 0;
+        for (int i = 0; i < LETTERS.length; i++) {
+            if (LETTERS[i] != 0)
+                return false;
+        }
+        return true;
     }
 }

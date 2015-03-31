@@ -1,4 +1,4 @@
-package org.jalgo;
+package org.jalgo.math;
 
 public class NumberToRoman {
 	static int[] NUMBERS = { 1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900,

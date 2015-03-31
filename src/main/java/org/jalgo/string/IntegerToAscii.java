@@ -1,4 +1,4 @@
-package org.jalgo;
+package org.jalgo.string;
 
 public class IntegerToAscii {
 

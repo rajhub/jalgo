@@ -1,5 +1,6 @@
 package org.jalgo;
 
+import org.jalgo.string.AsciiToInteger;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;

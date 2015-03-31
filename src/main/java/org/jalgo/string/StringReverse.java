@@ -1,4 +1,4 @@
-package org.jalgo;
+package org.jalgo.string;
 
 public class StringReverse {
 	public static void main(String[] args) {

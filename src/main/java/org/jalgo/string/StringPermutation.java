@@ -1,4 +1,4 @@
-package main.java.org.jalgo;
+package org.jalgo.string;
 
 import java.util.ArrayList;
 import java.util.List;
