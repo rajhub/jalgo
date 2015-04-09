@@ -1,4 +1,4 @@
-package org.jalgo.ds;
+package org.jalgo.ds.linkedlist;
 
 public class ListNode {
 	Object value;

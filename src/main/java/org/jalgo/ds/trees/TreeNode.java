@@ -1,4 +1,4 @@
-package org.jalgo.ds;
+package org.jalgo.ds.trees;
 
 public class TreeNode {
 	Object value;

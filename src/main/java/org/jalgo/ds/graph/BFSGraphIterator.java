@@ -1,4 +1,4 @@
-package org.jalgo.ds;
+package org.jalgo.ds.graph;
 
 
 import java.util.HashSet;
