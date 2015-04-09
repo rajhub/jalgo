@@ -1,4 +1,4 @@
-package org.jalgo.ds.trees;
+package org.jalgo.ds.tree;
 
 import java.util.ArrayList;
 import java.util.List;

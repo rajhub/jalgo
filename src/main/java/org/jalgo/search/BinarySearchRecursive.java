@@ -1,4 +1,4 @@
-package org.jalgo.sort;
+package org.jalgo.search;
 
 /**
  * Created by raj on 3/30/15.
