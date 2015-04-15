@@ -22,8 +22,27 @@ public class StringPermutation {
         }
     }
 
+    public List<String> permute2(String str) {
+        list.clear();
+        permute2(str, "", 0);
+        return list;
+    }
+
+    private void permute2(String original, String edited, int index) {
+        if (index >= original.length()) {
+            list.add(edited);
+            return;
+        }
+
+        // System.out.println(edited + original.charAt(index));
+        permute2(original, edited + original.charAt(index), index + 1);
+        // System.out.println(edited + "*");
+        permute2(original, edited + "*", index + 1);
+    }
+
     public static void main(String[] args) {
         StringPermutation sp = new StringPermutation();
         System.out.println(sp.permute("123"));
+        System.out.println(sp.permute2("123"));
     }
 }

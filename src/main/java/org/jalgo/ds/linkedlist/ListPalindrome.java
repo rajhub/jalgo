@@ -27,7 +27,7 @@ public class ListPalindrome {
             int top = stack.pop();
 
                 /* If values are different, then it's not a palindrome */
-            if (top != slow.value) {
+            if (top != (Integer) slow.value) {
                 return false;
             }
             slow = slow.next;
